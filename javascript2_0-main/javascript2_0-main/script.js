@@ -16,7 +16,7 @@
 
   cw1.addEventListener("click", function () {
     alert("Loading...");
-    fetch('https://my-json-server.typicode.com/trak2025zz/json-server/posts')
+    fetch('https://my-json-server.typicode.com/Kradoree/PAW/posts')
       .then(response => response.json())
       .then(posts => { 
         let post = posts.map(content => `
