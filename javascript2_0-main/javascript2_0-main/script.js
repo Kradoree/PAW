@@ -16,7 +16,7 @@
 
   cw1.addEventListener("click", function () {
     alert("Loading...");
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch('https://my-json-server.typicode.com/trak2025zz/json-server/posts')
       .then(response => response.json())
       .then(posts => { 
         let post = posts.map(content => `
@@ -33,7 +33,7 @@
   })
 
   cw2.addEventListener("click", function () {
-    answer.innerHTML = "Loading...";
+    alert("Loading...");
     fetch('https://jsonplaceholder.typicode.com/posts/1')
       .then(response => response.json())
       .then(posts => { 
@@ -50,7 +50,7 @@
   })
 
   cw3.addEventListener("click", function () {
-    answer.innerHTML = "Processing...";
+    alert("Processing...");
     fetch('https://jsonplaceholder.typicode.com/posts', {
       method: "POST",
       headers: {
