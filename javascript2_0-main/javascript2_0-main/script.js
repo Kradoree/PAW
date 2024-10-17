@@ -15,12 +15,12 @@
   })
 
   cw1.addEventListener("click", function () {
-    answer.innerHTML = "Loading...";
+    alert("Loading...");
     fetch('https://jsonplaceholder.typicode.com/posts')
       .then(response => response.json())
       .then(posts => { 
         let post = posts.map(content => `
-          <div>
+          <div class="post">
           <p>User ${content.userId} post ${content.id}</p>
           <h3>${content.title}</h1>
           <p>${content.body}</p>
@@ -28,6 +28,7 @@
           <br/>
           `).join(' ');
           answer.innerHTML = post;
+          console.log(post);
       })
   })
 
@@ -36,13 +37,15 @@
     fetch('https://jsonplaceholder.typicode.com/posts/1')
       .then(response => response.json())
       .then(posts => { 
-          answer.innerHTML = `
-          <div>
+          let post =  `
+          <div class="post">
           <p>User ${posts.userId} post ${posts.id}</p>
           <h3>${posts.title}</h1>
           <p>${posts.body}</p>
           </div>
           <br/>`;
+          answer.innerHTML = post;
+          consol.log(post);
       })
   })
 
@@ -63,6 +66,7 @@
       .then(response => response.json())
       .then(added => {
         answer.innerHTML = `Dodano nowy post o ID = ${added.id}`;
+        consol.log(`Dodano nowy post o ID = ${added.id}`);
       })
   })
 
